@@ -1,9 +1,9 @@
 import {useState,useEffect} from 'react';
 import axios from 'axios';
-import {useParam} from 'react-router-dom';
+import {useParams} from 'react-router-dom';
 
 const VotePoll = () =>{
-    const {id} = useParam();
+    const {id} = useParams();
     const [poll,setPoll] = useState(null);
     const [selectedOption,setSelectedOption]= useState(null);
 

@@ -1,6 +1,8 @@
 import  { useState } from 'react';
 import axios from 'axios';
 
+
+
 const CreatePoll = () => {
     const [question, setQuestion] = useState('');
     const [options, setOptions] = useState(['', '']);
@@ -14,7 +16,7 @@ const CreatePoll = () => {
     const addOption = () => setOptions([...options, '']);
 
     const handleSubmit = async () => {
-        const response = await axios.post('/api/polls/', { question, options });
+        const response = await axios.post('/polls/', { question, options });
         console.log(response.data);
     };
 
